@@ -7,15 +7,10 @@ import { Recipe } from './recipe.model';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent implements OnInit {
-  recipe: Recipe;
+  selectedRecipe: Recipe;
 
   constructor() { }
 
   ngOnInit() {
   }
-
-  onRecipeSelected = (recipe: Recipe) => {
-    this.recipe = recipe;
-  }
-
 }

@@ -7,12 +7,12 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
+  @Output() recipeWasSelected = new EventEmitter<Recipe>();
+
   recipes: Recipe[] = [
     new Recipe('A test recipe 1', 'This is simply a test 1', 'https://www.maxpixel.net/static/photo/1x/Mushrooms-Recipe-Kitchen-French-Dish-2459679.jpg'),
     new Recipe('A test recipe 2', 'This is simply a test 2', 'https://www.maxpixel.net/static/photo/1x/Mushrooms-Recipe-Kitchen-French-Dish-2459679.jpg')
   ];
-
-  @Output() recipeSelected = new EventEmitter<Recipe>();
 
   constructor() { }
 
@@ -20,6 +20,6 @@ export class RecipeListComponent implements OnInit {
   }
 
   onRecipeSelected = (recipe: Recipe) => {
-    this.recipeSelected.emit(recipe);
+    this.recipeWasSelected.emit(recipe);
   }
 }
