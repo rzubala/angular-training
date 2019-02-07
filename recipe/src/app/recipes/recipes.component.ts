@@ -13,6 +13,5 @@ export class RecipesComponent implements OnInit {
   constructor(private recipeService: RecipeService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.router.navigate(['empty'], {relativeTo: this.route});
   }
 }
