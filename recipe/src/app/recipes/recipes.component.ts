@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeService } from './recipe.service';
-import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-recipes',
@@ -10,7 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class RecipesComponent implements OnInit {
 
-  constructor(private recipeService: RecipeService, private router: Router, private route: ActivatedRoute) { }
+  constructor() { }
 
   ngOnInit() {
   }
