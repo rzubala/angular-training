@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   appStatus = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve('stable')
+      resolve('stable');
     }, 2000);
   });
-
   servers = [
     {
       instanceType: 'medium',
-      name: 'Production Server',
+      name: 'Production',
       status: 'stable',
       started: new Date(15, 1, 2017)
     },
@@ -46,7 +45,6 @@ export class AppComponent {
       'list-group-item-danger': server.status === 'critical'
     };
   }
-
   onAddServer() {
     this.servers.push({
       instanceType: 'small',
