@@ -20,6 +20,7 @@ export class AppComponent {
       id: this.generateId()
     }
   ];
+  appName = this.serverService.getAppName();
 
   constructor(private serverService: ServerService) {}
 
@@ -43,7 +44,7 @@ export class AppComponent {
 
   onGetServers() {
     this.serverService.getServers().subscribe(
-      (servers: any[]) => console.log(servers),
+      (servers: any[]) => this.servers = servers,
       (error) => console.log(error)
     );
   }
