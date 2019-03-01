@@ -23,6 +23,6 @@ import { SharedModule } from "../shared/shared.module";
         ReactiveFormsModule,
         RecipesRoutingModule,
         SharedModule
-    ]
+    ],
 })
 export class RecipesModule {}
