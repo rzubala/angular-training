@@ -7,14 +7,17 @@ export const SET_TOKEN = 'SET_TOKEN';
 
 export class Signup implements Action {
     readonly type: string = SIGNUP;
+    public payload: any;
 }
 
 export class Signin implements Action {
     readonly type: string = SIGNIN;
+    public payload: any;
 }
 
 export class Logout implements Action {
     readonly type: string = LOGOUT;
+    public payload: any;
 }
 
 export class SetToken implements Action {
@@ -23,4 +26,4 @@ export class SetToken implements Action {
     constructor(public payload: string) {}
 }
 
-export type AuthActions = Signup | Signin | Logout | SetToken;
+export type AuthActions = SetToken | Signup | Signin | Logout;
